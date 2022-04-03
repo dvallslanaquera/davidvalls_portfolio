@@ -91,15 +91,16 @@ header a {
 }
 
 header a:hover {
-    color: #30475E;
+    color: #F05454;
     text-decoration: none;
-    background: #F5F5F5;
+    background: #e7e7e7;
     border-radius: 4px
 }
 
 header a:focus {
     color: #F05454;
-    text-decoration: none
+    text-decoration: none;
+    background: #fff;
 }
 
 header.active {
@@ -385,9 +386,9 @@ footer {
     position: absolute;
     content: '';
     width: 3px;
-    height: 40px;
+    height: 30px;
     background: #F05454;
-    background: linear-gradient(to bottom, #777, rgba(52, 152, 219, 0));
+    background: linear-gradient(to bottom, #F05454, rgba(255, 255, 255, 0));
     top: 100%;
     left: 303px
 }
