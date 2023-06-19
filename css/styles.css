@@ -479,6 +479,13 @@ footer {
     border-radius: 4px
 }
 
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+
 .project-image {
     float: left
 }
