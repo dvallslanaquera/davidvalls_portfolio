@@ -531,8 +531,8 @@ footer {
 
 .fade-in {
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(150px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
 .fade-in.fade-in-visible {
