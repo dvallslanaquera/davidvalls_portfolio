@@ -252,7 +252,7 @@ footer {
 .background-alt {
     background: #F5F5F5;
 }
-/* 
+
 #lead {
     position: relative;
     height: 100vh;
@@ -261,9 +261,9 @@ footer {
     background-size: cover;
     padding: 15px;
     overflow: hidden
-} */
+}
 
-# lead {
+/* # lead {
     position: fixed;
     top: 0;
     left: 0;
@@ -273,7 +273,7 @@ footer {
     padding: 15px;
     overflow: hidden;
 }
-
+ */
 #lead-content {
     position: absolute;
     z-index: 10;
@@ -294,7 +294,8 @@ footer {
     object-fit: cover;
 }
 
-#lead-content h1, #lead-content h2 {
+#lead-content h1, 
+#lead-content h2 {
     margin: 0
 }
 
@@ -476,7 +477,8 @@ footer {
 
 #projects {
     padding: 50px 15px;
-    text-align: center
+    text-align: center;
+    margin-top: 100vh;
 }
 
 #projects h2 {
