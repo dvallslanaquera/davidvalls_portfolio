@@ -252,16 +252,26 @@ footer {
 .background-alt {
     background: #F5F5F5;
 }
-
+/* 
 #lead {
     position: relative;
     height: 100vh;
     min-height: 400px;
     max-height: 600px;
-/*     background: url(../images/code.jpg); */
     background-size: cover;
     padding: 15px;
     overflow: hidden
+} */
+
+# lead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    padding: 15px;
+    overflow: hidden;
 }
 
 #lead-content {
@@ -341,7 +351,7 @@ footer {
 #lead-down i {
     animation: pulsate 1.5s ease;
     animation-iteration-count: infinite;
-    padding-top: 5px
+    padding-top: 10px
 }
 
 @keyframes pulsate {
