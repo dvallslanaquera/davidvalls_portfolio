@@ -839,15 +839,16 @@ footer {
 
 @media only screen and (max-width: 480px) {
     #lead-content h1 {
-        font-size: 1.5em
+        font-size: 1.5em; /* Adjust font size for smaller screens */
     }
-
+    
     #lead-content h2 {
-        font-size: 1em
+        font-size: 1em; /* Adjust font size for smaller screens */
     }
 
     #lead-content a {
-        font-size: 0.9em;
-        padding: 5px 10px
+        padding: 5px 10px; /* Adjust padding for smaller screens */
     }
+
+    /* Add any additional adjustments here */
 }
