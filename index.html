@@ -6,64 +6,167 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>David's Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <script>
+        function changeLanguage(lang) {
+            document.querySelectorAll('[data-lang]').forEach(function (element) {
+                element.style.display = 'none';
+            });
+            document.querySelectorAll('[data-lang="' + lang + '"]').forEach(function (element) {
+                element.style.display = 'block';
+            });
+        }
+    </script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 </head>
 
-<body>
-    <div id="mobile-menu-open" class="shadow-large">
+<body onload="changeLanguage('jp')">
+    <!-- <div id="mobile-menu-open" class="shadow-large">
         <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
+    </div> -->
     <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#experience">Work Experience</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </header>
-    <!-- End header -->
-
+    
     <div id="lead">
+        <div id="language-switcher" class="fade-in-header">
+            <button onclick="changeLanguage('jp')">JP</button>
+            <button onclick="changeLanguage('en')">EN</button>
+        </div>
+        <header class="fade-in-header">
+            <div id="mobile-menu-close">
+                <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <ul id="menu" class="shadow">
+                <li data-lang="en">
+                    <a href="#projects">Projects</a>
+                </li>
+                <li data-lang="jp">
+                    <a href="#projects">プロジェクト</a>
+                </li>
+                <li data-lang="en">
+                    <a href="#experience">Work Experience</a>
+                </li>
+                <li data-lang="jp">
+                    <a href="#experience">職務経験</a>
+                </li>
+                <li data-lang="en">
+                    <a href="#skills">Skills</a>
+                </li>
+                <li data-lang="jp">
+                    <a href="#skills">スキル</a>
+                </li>
+                <li data-lang="en">
+                    <a href="#contact">Contact</a>
+                </li>
+                <li data-lang="jp">
+                    <a href="#contact">お問い合わせ</a>
+                </li>
+            </ul>
+        </header>
+        <div id="lead-content" class="fade-in-header">
+            <h1>David Valls</h1>
+            <h2 data-lang="en">Machine Learning Engineer</h2>
+            <h2 data-lang="jp">機械学習エンジニア</h2>
+            <a data-lang="en" href="https://docs.google.com/document/d/1aoMvrIcgImCUaC3uQC-ShY_r3BbHaQnHdnomRMdfD-w/edit?usp=drive_link" target="_blank" class="btn-rounded-white">Go To Resume</a>
+            <a data-lang="jp" href="https://docs.google.com/document/d/1aoMvrIcgImCUaC3uQC-ShY_r3BbHaQnHdnomRMdfD-w/edit?usp=drive_link" target="_blank" class="btn-rounded-white">履歴書</a>
+        </div>
+        <!-- End #lead-content -->
+        <div id="lead-overlay"></div>
 
-	<div id="lead-content">
-	    <h1>David Valls</h1>
-	    <h2>Machine Learning Engineer</h2>
-	    <a href="https://docs.google.com/document/d/1aoMvrIcgImCUaC3uQC-ShY_r3BbHaQnHdnomRMdfD-w/edit?usp=drive_link" target="_blank", class="btn-rounded-white">Go To Resume</a>
-	</div>
-	<!-- End #lead-content -->	        
-	<div id="lead-overlay"></div>
-
-	<video autoplay muted loop>
-	    <source src="./images/nn_vectors.mp4" type="video/mp4">
-	    Your browser does not support the video tag.
-	</video>
-	
-	<div id="lead-down">
-	    <span>
-	        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-	    </span>
-	</div>
-	<!-- End #lead-down -->
-	
+        <video autoplay muted loop>
+            <source src="./images/nn_vectors.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
     <!-- End #lead -->
+
+    <div id="about-me" class="experience-block fade-in">
+        <div class="container">
+            <div class="about-me-content">
+                <div class="about-me-image">
+                    <img src="images/david-pic.jpg" alt="David Valls" class="about-me-image">
+                </div>
+                <div class="about-me-text">
+                    <h2>About Me</h2>
+                    <p>I am David Valls, a passionate and dedicated Machine Learning Engineer with extensive experience in developing data-driven solutions and enhancing advertising technology. I thrive on solving complex problems and making data work for businesses.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about-me -->
+
+    <div id="experience" class="experience-block fade-in">
+        <h2 class="heading">Work Experience</h2>
+        <div id="experience-timeline">
+            <div data-date="August 2024 - Present" class="fade-in">
+                <h3>Freelancer</h3>
+                <h4><em>Machine Learning Engineer</em></h4>
+                <!-- <p>
+                <ul style="list-style-type:circle;">
+                    <li>Developed  </li>
+                    <li>Developed .</li>
+                    <li>Performed </li>
+                </ul>
+                </p> -->
+            </div>
+            <div data-date="November 2023 – June 2024" class="fade-in">
+                <h3>Flux</h3>
+                <h4><em>Machine Learning Engineer</em></h4>
+                <p>
+                <ul style="list-style-type:circle;">
+                    <li>Developed an ad server from scratch using Reinforcement Machine Learning in a team of 6 people and hosted in Google Cloud Platform.</li>
+                    <li>Member of the R&D department for research and development.</li>
+                </ul>
+                </p>
+            </div>
+            <div data-date="October 2020 – October 2023" class="fade-in">
+                <h3>Criteo</h3>
+                <h4><em>Senior Data Scientist</em></h4>
+                <p>
+                <ul style="list-style-type:circle;">
+                    <li>Developed a pipeline to filter websites with sensitive content that could damage advertiser’s reputation using NLP text classification techniques that already blocks 7% of suspicious traffic. </li>
+                    <li>Developed an anomaly detection pipeline that checks publisher’s data on a daily basis to detect fraud or technical issues. This pipeline speeded up the process of technical problem detection and is able to find issues that are time-consuming to find. One of the detected issues yielded $9,600 in daily profit when solved.</li>
+                    <li>Performed AB tests to keep improving ad inventories by comparing the performance of advertising campaigns through one network versus another. Results are presented to stakeholders from a statistical point of view including success metrics and guardrail metrics and decisions are made on the basis of the effect size and statistical significance.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div data-date="September 2021 – March 2022" class="fade-in">
+                <h3>University of Chicago</h3>
+                <h4><em>University Lecturer</em></h4>
+                <p>
+                <ul>
+                    <li>Lecturer of data science related topics in the course 'Storytelling with Data'.</li>
+                </ul style="list-style-type:circle;">
+                </p>
+            </div>
+
+            <div data-date="August 2018 – October 2020" class="fade-in">
+                <h3>Fujitsu CSL - Google Cloud Support</h3>
+                <h4><em>Data Analyst - Team Leader</em></h4>
+                <p>
+                <ul>
+                    <li>Leader of the Business Intelligence team for Google Cloud Support (team of 6 people).</li>
+                    <li>Developed a customer volume forecast for the Customer Support center in APAC with the objective of allocating the right amount of engineers at every time slot to improve customer satisfaction and prevent client churn. Churn rate improved from 6% to 2%.</li>
+                </ul style="list-style-type:circle;">
+                </p>
+            </div>
+
+            <div data-date="September 2015 – September 2017" class="fade-in">
+                <h3>Guttmann Institute - Neurorehabilitation Hospital</h3>
+                <h4><em>Research Assistant Internship</em></h4>
+                <p>
+                <ul>
+                    Member of the research team in a public hospital laboratory. In charge of the data management and data visualization part of the projects for the presentation of results. 
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End #experience -->
 
     <div id="projects" class="background-alt fade-in">
         <h2 class="heading">Projects</h2>
@@ -76,212 +179,142 @@
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>【日本語版あり】AB Test - Frequentist Inference</h3>
+                        <h3> AB Test - Frequentist Inference</h3>
                         <p>
                             AB tests are one of the most important tasks in the adtech industry. Essentially there are two main approaches: bayesian and frequentist. Here we will exploring the frequentist approach while explaining its most important concepts.
                         </p>
-			<br>
+                        <br>
                         <a href="https://colab.research.google.com/drive/1h-TBMkB0HACgIbZEHLrokZsD5qKK80uF?usp=sharing" target="_blank">View Project</a>
-			<br>
-			<br>
-			<br>
-			<a href="https://colab.research.google.com/drive/1AN5aQ0OQowQDxuISqNTu0K0RUyjF4iwd?usp=sharing" target="_blank">プロジェクトへ</a>
-                    	<br>
-			<br>
-		    </div>
-                    <!-- End .project-info -->
+                        <br>
+                        <br>
+                        <br>
+                        <a href="https://colab.research.google.com/drive/1AN5aQ0OQowQDxuISqNTu0K0RUyjF4iwd?usp=sharing" target="_blank">プロジェクトへ</a>
+                        <br>
+                        <br>
+                    </div>
                 </div>
-                <!-- End .project -->
 
-		<div class="project shadow-large fade-in">
+                <div class="project shadow-large fade-in">
                     <div class="project-image">
                         <img src="images/nlp-logo.png" />
                     </div>
-                    <!-- End .project-image -->
                     <div class="project-info">
                         <h3>Website Text Classification (Transformers approach)</h3>
                         <p>
                             When placing advertisements in a website is important to make sure the quality of the content. If the content is 'sensitive', placing a banner could damage advertiser's damage. In this notebook we build a pipeline that, scraping the content from a web and using NLP afterwards, we check if the content is sensitive or not to blacklist it.'
                         </p>
-			<br>
+                        <br>
                         <a href="https://github.com/dvallslanaquera/llm-solutions/blob/main/sequence_classification/customer-complaint-classification_DistilBERT/main.ipynb" target="_blank">View Project</a>
                     </div>
-                    <!-- End .project-info -->
                 </div>
-                <!-- End .project -->
 
                 <div class="project shadow-large fade-in">
                     <div class="project-image">
                         <img src="images/nlp-logo.png" />
                     </div>
-                    <!-- End .project-image -->
                     <div class="project-info">
                         <h3>Website Text Classification (TF-IDF approach)</h3>
                         <p>
                             When placing advertisements in a website is important to make sure the quality of the content. If the content is 'sensitive', placing a banner could damage advertiser's damage. In this notebook we build a pipeline that, scraping the content from a web and using NLP afterwards, we check if the content is sensitive or not to blacklist it.'
                         </p>
-			<br>
+                        <br>
                         <a href="https://colab.research.google.com/drive/1uv-ZBDuYGV-lNR73iL9lFJWnPpPzcwHx?usp=sharing" target="_blank">View Project</a>
                     </div>
-                    <!-- End .project-info -->
                 </div>
-                <!-- End .project -->
 
-		<div class="project shadow-large fade-in">
+                <div class="project shadow-large fade-in">
                     <div class="project-image">
-                        <img src="images/devops.png"/>
+                        <img src="images/devops.png" />
                     </div>
-                    <!-- End .project-image -->
                     <div class="project-info">
                         <h3>CI/CD 101</h3>
                         <p>
                             Continuous Integration, Delivery and Deployment tools for Data Scientists. This is a sample from training materials about CI/CD for company newcomers. It includes an overview of three important tools used for MLOps: GitLab, Docker and Jenkins.
                         </p>
-			<br>
+                        <br>
                         <a href="https://colab.research.google.com/drive/1U56QuaaMkGoNNmz3zbmkhm681agcOgii?usp=sharing" target="_blank">View Project</a>
                     </div>
-                    <!-- End .project-info --> 
                 </div>
-                <!-- End .project -->
-		    
+
                 <div class="project shadow-large fade-in">
                     <div class="project-image">
                         <img src="images/heart.png" />
                     </div>
-                    <!-- End .project-image -->
                     <div class="project-info">
                         <h3>Survival Analysis</h3>
                         <p>
-                            Example of a survival analysis project using real medical records containing echocardiogram data of patients. We will see how we can predict the survival rate of those patients and explore the covariates that affect this rate. 
+                            Example of a survival analysis project using real medical records containing echocardiogram data of patients. We will see how we can predict the survival rate of those patients and explore the covariates that affect this rate.
                         </p>
-			<br>
+                        <br>
                         <a href="https://colab.research.google.com/drive/1MomnKi3kF-zw2xi4jzvn5sIB8Ot3Oqgp?usp=sharing#scrollTo=j6aYwmBL4FI9" target="_blank">View Project</a>
                     </div>
-                    <!-- End .project-info -->
                 </div>
-                <!-- End .project -->
 
                 <div class="project shadow-large fade-in">
                     <div class="project-image">
                         <img src="images/win-logo.png" />
                     </div>
-                    <!-- End .project-image -->
                     <div class="project-info">
                         <h3>Unhashing algorithm</h3>
                         <p>
                             Python script to match two lists of hashed IDs. It can be run on the terminal console and it contains a module that can be linked to a database to automatically generate and update the lookup list of hashed IDs.
                         </p>
-			<br>
+                        <br>
                         <a href="https://github.com/dvallslanaquera/unhasher/blob/main/main.py" target="_blank">View Project</a>
                     </div>
-                    <!-- End .project-info -->
                 </div>
-                <!-- End .project -->
 
-		<div class="project shadow-large fade-in">
+                <div class="project shadow-large fade-in">
                     <div class="project-image">
-                        <img src="images/speed.jpg"/>
+                        <img src="images/speed.jpg" />
                     </div>
-                    <!-- End .project-image -->
                     <div class="project-info">
                         <h3>Credit Fraud</h3>
                         <p>
                             Financial companies use credit scores to rate new clients and detect potential frauds. In this notebook we will be working on a forecast tool that predicts the risk of fraud working with the data from the Give Me Some Credit Kaggle challenge.
                         </p>
-			<br>
+                        <br>
                         <a href="https://colab.research.google.com/drive/1cWwtFWnfzGMGPB9W4mJVyP-ArxEnbl9N?usp=sharing" target="_blank">View Project</a>
                     </div>
-                    <!-- End .project-info --> 
                 </div>
-                <!-- End .project -->
-		    
-		<div class="project shadow-large fade-in">
+
+                <div class="project shadow-large fade-in">
                     <div class="project-image">
                         <img src="images/timeseries.jpg" />
                     </div>
-                    <!-- End .project-image -->
                     <div class="project-info">
                         <h3>Time Series Forecasting</h3>
                         <p>
                             Sample of how we can forecast future values in a time series using LSTM.
                         </p>
-			<br>
+                        <br>
                         <a href="https://colab.research.google.com/drive/16CwegTfiYt7d71LeBwFzDRiB3G-GEApA?usp=sharing" target="_blank">View Project</a>
                     </div>
-                    <!-- End .project-info -->
                 </div>
-                <!-- End .project -->
 
             </div>
         </div>
     </div>
     <!-- End #projects -->
 
-    <div id="experience" class="experience-block fade-in">
-        <h2 class="heading">Work Experience</h2>
-        <div id="experience-timeline">
-            <div data-date="October 2020 – Present" class="fade-in">
-                <h3>Criteo</h3>
-                <h4><em>Senior Data Scientist</em></h4>
-                <p>
-                    <ul style="list-style-type:circle;">
-                        <li>Developed a pipeline to filter websites with sensitive content that could damage advertiser’s reputation using NLP text classification techniques that already blocks 7% of suspicious traffic. </li>
-                        <li>Developed an anomaly detection pipeline that checks publisher’s data on a daily basis to detect fraud or technical issues. This pipeline speeded up the process of technical problem detection and is able to find issues that are time-consuming to find. One of the detected issues yielded $9,600 in daily profit when solved.</li>
-                        <li>Performed AB tests to keep improving ad inventories by comparing the performance of advertising campaigns through one network versus another. Results are presented to stakeholders from a statistical point of view including success metrics and guardrail metrics and decisions are made on the basis of the effect size and statistical significance.</li>
-                    </ul>
-                </p>
-            </div>
-
-            <div data-date="September 2021 – March 2022" class="fade-in">
-                <h3>University of Chicago</h3>
-                <h4><em>University Lecturer</em></h4>
-                <p>
-                    <ul>
-                        <li>Lecturer of data science related topics in the course 'Storytelling with Data'.</li>
-                    </ul style="list-style-type:circle;">
-                </p>
-            </div>
-
-            <div data-date="August 2018 – October 2020" class="fade-in">
-                <h3>Fujitsu CSL - Google Cloud Support</h3>
-                <h4><em>Data Analyst - Team Leader</em></h4>
-                <p>
-                    <ul>
-                        <li>Leader of the Business Intelligence team for Google Cloud Support (team of 6 people).</li>
-                        <li>Developed a customer volume forecast for the Customer Support center in APAC with the objective of allocating the right amount of engineers at every time slot to improve customer satisfaction and prevent client churn. Churn rate improved from 6% to 2%.</li>
-                    </ul style="list-style-type:circle;">
-                </p>
-            </div>
-
-            <div data-date="September 2015 – September 2017" class="fade-in">
-                <h3>Guttmann Institute - Neurorehabilitation Hospital</h3>
-                <h4><em>Research Assistant Internship</em></h4>
-                <p>
-                    <ul>
-                        Member of the research team in a public hospital laboratory. In charge of the data management and data visualization part of the projects for the presentation of results. 
-                    </ul>
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- End #experience -->
     <div id="skills" class="background-alt fade-in">
         <h2 class="heading">Skills</h2>
         <ul>
             <li>Python</li>
             <li>R</li>
-            <li>TensorFlow</li>    
+            <li>Google Cloud Platform</li>
+            <li>PyTorch</li>
+            <li>TensorFlow</li>
             <li>Anomaly Detection</li>
+            <li>Pipeline design</li>
             <li>MySQL</li>
             <li>Spark</li>
             <li>NLP</li>
             <li>MLOps</li>
             <li>Tableau</li>
-            <li>LSTM</li>
-	    <li>Docker</li>
-	    <li>MLOps</li>	
-            <li>Google Cloud Platform</li>
-            <li>Deep Learning</li>
+            <li>CI/CD Dev</li>
+            <li>Docker</li>
+            <li>MLOps</li>
             <li>Git</li>
         </ul>
     </div>
@@ -302,11 +335,11 @@
     <!-- End #contact -->
 
     <footer>
-        <div class="container>
+        <div class="container">
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; <span id="current-year">2023</span> DAVID VALLS 
+                        Copyright &copy; <span id="current-year">2024</span> DAVID VALLS 
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -338,8 +371,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
     <script>
-        $(window).on('scroll', function() {
-            $('.fade-in').each(function() {
+        $(window).on('scroll', function () {
+            $('.fade-in').each(function () {
                 if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
                     $(this).addClass('fade-in-visible');
                 }

@@ -52,50 +52,35 @@ body.active {
     }
 }
 
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 10;
-    animation-name: dropHeader;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-    animation-duration: 3s
-}
-
 header ul {
-    display: inline-block;
-    background: #F5F5F5;
-    text-align: center;
+    display: flex; 
+    justify-content: center; 
+    list-style: none; 
+    background: none;
     padding: 10px;
     margin: 0;
     border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px
+    border-bottom-left-radius: 4px;
 }
 
 header li {
-    display: inline-block
+    margin: 0 10px; 
 }
 
 header a {
-    display: block;
-    color: #30475E;
-    padding: 10px
+    display: inline-block; 
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none; 
+    transition: all 0.75s;
+    font-size: 18px;
 }
 
 header a:hover {
-    color: #F05454;
-    text-decoration: none;
-    background: #e7e7e7;
-    border-radius: 4px
-}
-
-header a:focus {
-    color: #F05454;
-    text-decoration: none;
-    background: #fff;
+    color: #fff; 
+    background: rgb(240, 84, 84); 
+    border-color: rgb(240, 84, 84);
+    border-radius: 4px;
 }
 
 header.active {
@@ -179,7 +164,8 @@ footer {
 }
 
 .social {
-    text-align: right
+    width: 100%;
+    text-align: right;
 }
 
 .social ul {
@@ -196,7 +182,8 @@ footer {
 .social a {
     display: block;
     color: #30475E;
-    padding: 10px
+    padding: 10px;
+    font-size: 2em;
 }
 
 .social a:hover {
@@ -206,19 +193,19 @@ footer {
 .btn-rounded-white {
     display: inline-block;
     color: #F5F5F5;
-    padding: 15px 30px;
+    padding: 12px 25px;
     border: 1.5px solid #F5F5F5;
     border-radius: 20px;
-    transition: .5s ease all;
+    transition: all 0.75s ease;
     font-size: 20px;
     font-weight: 200;
     margin-top: 10px;
 }
 
 .btn-rounded-white:hover {
-    color: #F05454;
-    background: #fff;
-    text-decoration: none
+    color: #fff; 
+    background: rgba(240, 84, 84, 0.8); 
+    border-color: rgba(240, 84, 84, 0.8); 
 }
 
 .shadow {
@@ -262,17 +249,17 @@ footer {
     overflow: hidden;
 }
 
-/* # lead {
-    position: fixed;
-    top: 0;
-    left: 0;
+#lead header {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
     width: 100%;
-    height: 100%;
-    z-index: -1;
-    padding: 15px;
-    overflow: hidden;
+    text-align: center;
+    background: none; 
 }
- */
+
 #lead-content {
     position: absolute;
     z-index: 10;
@@ -307,6 +294,7 @@ footer {
     line-height: 0.9em
 }
 
+
 #lead-content h2 {
     color: #F5F5F5;
     font-weight: 500;
@@ -322,7 +310,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.92); /* Changed color to black */
+    background: rgba(0, 0, 0, 0.92); 
     z-index: 1;
 }
 
@@ -371,6 +359,7 @@ footer {
 #experience {
     padding: 50px 15px;
     text-align: center;
+    background: #F5F5F5;
 }
 
 #experience h2 {
@@ -477,6 +466,8 @@ footer {
 #projects {
     padding: 50px 15px;
     text-align: center;
+    background: #ffffff; /* New background color for projects */
+    color: #F5F5F5; /* Ensure text is readable on darker background */
 }
 
 #projects h2 {
@@ -534,7 +525,7 @@ footer {
     padding: 10px 20px;
     margin: 40px 40px;
     border-radius: 30px;
-    transition: .5s ease all;
+    transition: .75s ease all;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
@@ -549,6 +540,12 @@ footer {
     margin: 0;
     padding: 30px 15px;
     transform: none
+}
+
+.fade-in-header {
+    animation: fadeIn 1.5s ease-in;
+    opacity: 0; /* Ensure they start hidden */
+    animation-fill-mode: forwards; /* Keep the final state after animation */
 }
 
 .fade-in {
@@ -623,7 +620,7 @@ footer {
     margin-bottom: 10px;
     background: hsl(0, 1%, 80%);
     color: #fff;
-    transition: .5s ease all
+    transition: .75s ease all
 }
 
 #contact-form input::-webkit-input-placeholder, #contact-form textarea::-webkit-input-placeholder {
@@ -664,7 +661,7 @@ footer {
     color: #30475E;
     font-weight: 700;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.24);
-    transition: .5s ease all
+    transition: .75s ease all
 }
 
 #contact-form button:hover {
@@ -734,6 +731,15 @@ footer {
 
     .vtimeline-content {
         margin-left: 70px
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -839,16 +845,60 @@ footer {
 
 @media only screen and (max-width: 480px) {
     #lead-content h1 {
-        font-size: 1.5em; /* Adjust font size for smaller screens */
+        font-size: 1.5em; 
     }
     
     #lead-content h2 {
-        font-size: 1em; /* Adjust font size for smaller screens */
+        font-size: 1em; 
     }
 
     #lead-content a {
-        padding: 5px 10px; /* Adjust padding for smaller screens */
+        padding: 5px 10px; 
     }
+}
 
-    /* Add any additional adjustments here */
+#language-switcher {
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+}
+
+#language-switcher button {
+    background: transparent;
+    color: #F5F5F5;
+    border: 2px solid #F5F5F5;
+    padding: 7px 13px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all .75s; 
+}
+
+#language-switcher button:hover {
+    background: rgba(240, 84, 84, 0.5);
+    color: #fff;
+    border-color: rgba(240, 84, 84, 0.5);
+}
+
+.about-me-content {
+    display: flex;
+    align-items: center; 
+}
+
+.about-me-image {
+    flex: 1;
+    max-width: 500px; 
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+    border-radius: 0; 
+}
+
+.about-me-text {
+    flex: 2;
+    padding-left: 20px;
 }
