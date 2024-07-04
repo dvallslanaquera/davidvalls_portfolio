@@ -206,11 +206,11 @@ footer {
 .btn-rounded-white {
     display: inline-block;
     color: #F5F5F5;
-    padding: 6px 12px;
+    padding: 15px 30px;
     border: 1.5px solid #F5F5F5;
     border-radius: 20px;
     transition: .5s ease all;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 200;
     margin-top: 10px;
 }
