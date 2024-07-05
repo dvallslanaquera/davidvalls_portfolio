@@ -940,5 +940,14 @@ footer {
     .about-me-text p {
         font-size: 1em; /* Adjust the font size of About Me text */
     }
-}
 
+    #language-switcher button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .btn-rounded-white {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+}
