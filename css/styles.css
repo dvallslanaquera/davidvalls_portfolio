@@ -950,4 +950,13 @@ footer {
         padding: 10px 20px;
         font-size: 14px;
     }
+
+    #lead {
+        height: 100vh; /* Ensure it covers full viewport height */
+        padding: 0;
+    }
+
+    #lead-overlay {
+        height: 100vh; /* Ensure it covers full viewport height */
+    }
 }
