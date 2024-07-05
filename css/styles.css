@@ -902,3 +902,43 @@ footer {
     flex: 2;
     padding-left: 20px;
 }
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 12px; /* Adjust the base font size */
+    }
+
+    header a {
+        font-size: 14px; /* Adjust the font size of menu items */
+    }
+
+    #lead-content h1 {
+        font-size: 1.5em; 
+    }
+    
+    #lead-content h2 {
+        font-size: 1em; 
+    }
+
+    #lead-content a {
+        padding: 5px 10px; 
+        font-size: 14px; /* Adjust font size of buttons */
+    }
+
+    #contact-form input, #contact-form textarea {
+        font-size: 14px; /* Adjust the font size of form inputs */
+    }
+
+    #contact-form button {
+        font-size: 14px; /* Adjust the font size of form buttons */
+    }
+
+    .about-me-text h2 {
+        font-size: 1.5em; /* Adjust the font size of About Me heading */
+    }
+
+    .about-me-text p {
+        font-size: 1em; /* Adjust the font size of About Me text */
+    }
+}
+
