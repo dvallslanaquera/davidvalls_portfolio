@@ -9,7 +9,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <script>
         function changeLanguage(lang) {
             document.querySelectorAll('[data-lang]').forEach(function (element) {
@@ -20,14 +23,12 @@
             });
         }
     </script>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body onload="changeLanguage('jp')">
-    <!-- <div id="mobile-menu-open" class="shadow-large">
+    <div id="mobile-menu-open" class="shadow-large">
         <i class="fa fa-bars" aria-hidden="true"></i>
-    </div> -->
+    </div>
     <!-- End #mobile-menu-toggle -->
     
     <div id="lead">
@@ -40,29 +41,17 @@
                 <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
             </div>
             <ul id="menu" class="shadow">
-                <li data-lang="en">
+                <li>
                     <a href="#projects">Projects</a>
                 </li>
-                <li data-lang="jp">
-                    <a href="#projects">プロジェクト</a>
-                </li>
-                <li data-lang="en">
+                <li>
                     <a href="#experience">Work Experience</a>
                 </li>
-                <li data-lang="jp">
-                    <a href="#experience">職務経験</a>
-                </li>
-                <li data-lang="en">
+                <li>
                     <a href="#skills">Skills</a>
                 </li>
-                <li data-lang="jp">
-                    <a href="#skills">スキル</a>
-                </li>
-                <li data-lang="en">
+                <li>
                     <a href="#contact">Contact</a>
-                </li>
-                <li data-lang="jp">
-                    <a href="#contact">お問い合わせ</a>
                 </li>
             </ul>
         </header>
@@ -70,8 +59,9 @@
             <h1>David Valls</h1>
             <h2 data-lang="en">Machine Learning Engineer</h2>
             <h2 data-lang="jp">機械学習エンジニア</h2>
-            <a data-lang="en" href="https://docs.google.com/document/d/1aoMvrIcgImCUaC3uQC-ShY_r3BbHaQnHdnomRMdfD-w/edit?usp=drive_link" target="_blank" class="btn-rounded-white">Go To Resume</a>
-            <a data-lang="jp" href="https://docs.google.com/document/d/1aoMvrIcgImCUaC3uQC-ShY_r3BbHaQnHdnomRMdfD-w/edit?usp=drive_link" target="_blank" class="btn-rounded-white">履歴書</a>
+            <a data-lang="en" href="https://docs.google.com/document/d/1aoMvrIcgImCUaC3uQC-ShY_r3BbHaQnHdnomRMdfD-w/edit?usp=drive_link" target="_blank" class="btn-rounded-white">Go to Resume</a>
+            <a data-lang="jp" href="https://docs.google.com/spreadsheets/d/18KXO83koO-IABf8LU319mR_vwtAQhgwZ2JrQRGnxFQU/edit?usp=sharing" target="_blank" class="btn-rounded-white">履歴書 【日本語版】</a>
+            <a data-lang="jp" href="https://docs.google.com/document/d/1aoMvrIcgImCUaC3uQC-ShY_r3BbHaQnHdnomRMdfD-w/edit" target="_blank" class="btn-rounded-white">履歴書 【英語版】</a>
         </div>
         <!-- End #lead-content -->
         <div id="lead-overlay"></div>
@@ -91,7 +81,8 @@
                 </div>
                 <div class="about-me-text">
                     <h2>About Me</h2>
-                    <p>I am David Valls, a passionate and dedicated Machine Learning Engineer with extensive experience in developing data-driven solutions and enhancing advertising technology. I thrive on solving complex problems and making data work for businesses.</p>
+                    <p data-lang="en">I am David Valls, a passionate and dedicated Machine Learning Engineer with extensive experience in developing data-driven solutions and enhancing advertising technology. I thrive on solving complex problems and making data work for businesses.</p>
+                    <p data-lang="jp">スペイン出身のDavidです。2018年に来日し、様々な大手企業に勤めてきました。もともと医療系のキャリアを積み、研究所でR言語を用いた実験の開発を取り組んでいましたが、途中でデータサイエンスに興味を持ち始め、広告業界の外資系企業でデータサイエンティストとして働きました。現在は、機械学習ソリューション（例えば、NLPや予測ツール）を活用して様々なクライアントの問題解決を支援しています。</p>
                 </div>
             </div>
         </div>
@@ -99,73 +90,89 @@
     <!-- End #about-me -->
 
     <div id="experience" class="experience-block fade-in">
-        <h2 class="heading">Work Experience</h2>
+        <h2 class="heading" data-lang="en">Work Experience</h2>
+        <h2 class="heading" data-lang="jp">職務経歴</h2>
         <div id="experience-timeline">
             <div data-date="August 2024 - Present" class="fade-in">
-                <h3>Freelancer</h3>
-                <h4><em>Machine Learning Engineer</em></h4>
-                <!-- <p>
-                <ul style="list-style-type:circle;">
-                    <li>Developed  </li>
-                    <li>Developed .</li>
-                    <li>Performed </li>
-                </ul>
-                </p> -->
-            </div>
+                <h3 data-lang="en">Freelancer</h3>
+                <h3 data-lang="jp">フリーランサー</h3>
+                <h4 data-lang="en"><em>Machine Learning Engineer</em></h4>
+                <h4 data-lang="jp"><em>機械学習エンジニア</em></h4>
+            </div>        
+            
             <div data-date="November 2023 – June 2024" class="fade-in">
                 <h3>Flux</h3>
-                <h4><em>Machine Learning Engineer</em></h4>
+                <h4 data-lang="en"><em>Machine Learning Engineer</em></h4>
+                <h4 data-lang="jp"><em>機械学習エンジニア</em></h4>
                 <p>
-                <ul style="list-style-type:circle;">
-                    <li>Developed an ad server from scratch using Reinforcement Machine Learning in a team of 6 people and hosted in Google Cloud Platform.</li>
-                    <li>Member of the R&D department for research and development.</li>
-                </ul>
+                    <ul style="list-style-type:circle;">
+                        <li data-lang="en">Developed an ad server from scratch using Reinforcement Machine Learning in a team of 6 people and hosted in Google Cloud Platform.</li>
+                        <li data-lang="jp">6人のチームで強化機械学習を使用してゼロから広告サーバーを開発し、Google Cloud Platformにホストしました。</li>
+                        <li data-lang="en">Member of the R&D department for research and development.</li>
+                        <li data-lang="jp">研究開発のR&D部門のメンバー。</li>
+                    </ul>
                 </p>
             </div>
+    
             <div data-date="October 2020 – October 2023" class="fade-in">
                 <h3>Criteo</h3>
-                <h4><em>Senior Data Scientist</em></h4>
+                <h4 data-lang="en"><em>Senior Data Scientist</em></h4>
+                <h4 data-lang="jp"><em>シニアデータサイエンティスト</em></h4>
                 <p>
-                <ul style="list-style-type:circle;">
-                    <li>Developed a pipeline to filter websites with sensitive content that could damage advertiser’s reputation using NLP text classification techniques that already blocks 7% of suspicious traffic. </li>
-                    <li>Developed an anomaly detection pipeline that checks publisher’s data on a daily basis to detect fraud or technical issues. This pipeline speeded up the process of technical problem detection and is able to find issues that are time-consuming to find. One of the detected issues yielded $9,600 in daily profit when solved.</li>
-                    <li>Performed AB tests to keep improving ad inventories by comparing the performance of advertising campaigns through one network versus another. Results are presented to stakeholders from a statistical point of view including success metrics and guardrail metrics and decisions are made on the basis of the effect size and statistical significance.</li>
-                </ul>
+                    <ul style="list-style-type:circle;">
+                        <li data-lang="en">Developed a pipeline to filter websites with sensitive content that could damage advertiser’s reputation using NLP text classification techniques that already blocks 7% of suspicious traffic.</li>
+                        <li data-lang="jp">NLPテキスト分類技術を使用して、広告主の評判を損なう可能性のあるセンシティブなコンテンツを含むウェブサイトをフィルタリングするパイプラインを開発し、既に7％の疑わしいトラフィックをブロックしています。</li>
+                        <li data-lang="en">Developed an anomaly detection pipeline that checks publisher’s data on a daily basis to detect fraud or technical issues. This pipeline speeded up the process of technical problem detection and is able to find issues that are time-consuming to find. One of the detected issues yielded $9,600 in daily profit when solved.</li>
+                        <li data-lang="jp">発行者のデータを毎日チェックして不正や技術的な問題を検出する異常検出パイプラインを開発。このパイプラインは技術的問題の検出プロセスを加速し、発見に時間がかかる問題を見つけることができます。検出された問題の1つは、解決時に1日あたり9,600ドルの利益をもたらしました。</li>
+                        <li data-lang="en">Performed AB tests to keep improving ad inventories by comparing the performance of advertising campaigns through one network versus another. Results are presented to stakeholders from a statistical point of view including success metrics and guardrail metrics and decisions are made on the basis of the effect size and statistical significance.</li>
+                        <li data-lang="jp">ABテストを実施して広告キャンペーンのパフォーマンスを比較し、広告インベントリを改善し続けました。結果は成功指標とガードレール指標を含む統計的観点から利害関係者に提示され、効果の大きさと統計的有意性に基づいて決定が下されます。</li>
+                    </ul>
                 </p>
             </div>
-
+    
             <div data-date="September 2021 – March 2022" class="fade-in">
-                <h3>University of Chicago</h3>
-                <h4><em>University Lecturer</em></h4>
+                <h3 data-lang="en">University of Chicago</h3>
+                <h3 data-lang="jp">シカゴ大学</h3>
+                <h4 data-lang="en"><em>University Lecturer</em></h4>
+                <h4 data-lang="jp"><em>大学講師</em></h4>
                 <p>
-                <ul>
-                    <li>Lecturer of data science related topics in the course 'Storytelling with Data'.</li>
-                </ul style="list-style-type:circle;">
+                    <ul style="list-style-type:circle;">
+                        <li data-lang="en">Lecturer of data science related topics in the course 'Storytelling with Data'.</li>
+                        <li data-lang="jp">「データを使ったストーリーテリング」コースでデータサイエンス関連のトピックの講師。</li>
+                    </ul>
                 </p>
             </div>
-
+    
             <div data-date="August 2018 – October 2020" class="fade-in">
-                <h3>Fujitsu CSL - Google Cloud Support</h3>
-                <h4><em>Data Analyst - Team Leader</em></h4>
+                <h3 data-lang="en">Fujitsu CSL - Google Cloud Support</h3>
+                <h3 data-lang="jp">富士通CSL - Google Cloudサポート</h3>
+                <h4 data-lang="en"><em>Data Analyst - Team Leader</em></h4>
+                <h4 data-lang="jp"><em>データアナリスト - チームリーダー</em></h4>
                 <p>
-                <ul>
-                    <li>Leader of the Business Intelligence team for Google Cloud Support (team of 6 people).</li>
-                    <li>Developed a customer volume forecast for the Customer Support center in APAC with the objective of allocating the right amount of engineers at every time slot to improve customer satisfaction and prevent client churn. Churn rate improved from 6% to 2%.</li>
-                </ul style="list-style-type:circle;">
+                    <ul style="list-style-type:circle;">
+                        <li data-lang="en">Leader of the Business Intelligence team for Google Cloud Support (team of 6 people).</li>
+                        <li data-lang="jp">Google Cloudサポートのビジネスインテリジェンスチーム（6人のチーム）のリーダー。</li>
+                        <li data-lang="en">Developed a customer volume forecast for the Customer Support center in APAC with the objective of allocating the right amount of engineers at every time slot to improve customer satisfaction and prevent client churn. Churn rate improved from 6% to 2%.</li>
+                        <li data-lang="jp">APACのカスタマーサポートセンターの顧客数予測を開発し、エンジニアを適切に配置して顧客満足度を向上させ、顧客離れを防ぐことを目的としました。離職率は6％から2％に改善しました。</li>
+                    </ul>
                 </p>
             </div>
-
+    
             <div data-date="September 2015 – September 2017" class="fade-in">
-                <h3>Guttmann Institute - Neurorehabilitation Hospital</h3>
-                <h4><em>Research Assistant Internship</em></h4>
+                <h3 data-lang="en">Guttmann Institute - Neurorehabilitation Hospital</h3>
+                <h3 data-lang="jp">グットマン研究所 - 神経リハビリテーション病院</h3>
+                <h4 data-lang="en"><em>Research Assistant Internship</em></h4>
+                <h4 data-lang="jp"><em>研究助手インターン</em></h4>
                 <p>
-                <ul>
-                    Member of the research team in a public hospital laboratory. In charge of the data management and data visualization part of the projects for the presentation of results. 
-                </ul>
+                    <ul style="list-style-type:circle;">
+                        <li data-lang="en">Member of the research team in a public hospital laboratory. In charge of the data management and data visualization part of the projects for the presentation of results.</li>
+                        <li data-lang="jp">公立病院の研究チームのメンバー。プロジェクトの結果を発表するためのデータ管理とデータ可視化を担当。</li>
+                    </ul>
                 </p>
             </div>
         </div>
     </div>
+    
     <!-- End #experience -->
 
     <div id="projects" class="background-alt fade-in">
@@ -175,34 +182,15 @@
 
                 <div class="project shadow-large fade-in">
                     <div class="project-image">
-                        <img src="images/science.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3> AB Test - Frequentist Inference</h3>
-                        <p>
-                            AB tests are one of the most important tasks in the adtech industry. Essentially there are two main approaches: bayesian and frequentist. Here we will exploring the frequentist approach while explaining its most important concepts.
-                        </p>
-                        <br>
-                        <a href="https://colab.research.google.com/drive/1h-TBMkB0HACgIbZEHLrokZsD5qKK80uF?usp=sharing" target="_blank">View Project</a>
-                        <br>
-                        <br>
-                        <br>
-                        <a href="https://colab.research.google.com/drive/1AN5aQ0OQowQDxuISqNTu0K0RUyjF4iwd?usp=sharing" target="_blank">プロジェクトへ</a>
-                        <br>
-                        <br>
-                    </div>
-                </div>
-
-                <div class="project shadow-large fade-in">
-                    <div class="project-image">
                         <img src="images/nlp-logo.png" />
                     </div>
                     <div class="project-info">
-                        <h3>Website Text Classification (Transformers approach)</h3>
-                        <p>
+                        <h3 data-lang="en">Website Classification (LLM approach)</h3>
+                        <h3 data-lang="jp">ウエブサイト分類 (LLMアプローチ)</h3>
+                        <p data-lang="en">
                             When placing advertisements in a website is important to make sure the quality of the content. If the content is 'sensitive', placing a banner could damage advertiser's damage. In this notebook we build a pipeline that, scraping the content from a web and using NLP afterwards, we check if the content is sensitive or not to blacklist it.'
                         </p>
+                        <p data-lang="jp">ウェブサイトに広告を掲載する際には、コンテンツの質を確認することが重要です。このノートブックでは、ウェブサイトのコンテンツをスクレイピングし、NLPを使用してセンシティブかどうかを判定し、ブラックリストに登録するパイプラインを構築します。</p>
                         <br>
                         <a href="https://github.com/dvallslanaquera/llm-solutions/blob/main/sequence_classification/customer-complaint-classification_DistilBERT/main.ipynb" target="_blank">View Project</a>
                     </div>
@@ -210,12 +198,34 @@
 
                 <div class="project shadow-large fade-in">
                     <div class="project-image">
+                        <img src="images/science.jpg" />
+                    </div>
+                    <div class="project-info">
+                        <h3 data-lang="en">AB Test - Frequentist Inference</h3>
+                        <h3 data-lang="jp">A/Bテスト - 頻度主義的アプローチ</h3>
+                        <p data-lang="en">AB tests are one of the most important tasks in the adtech industry. Essentially there are two main approaches: bayesian and frequentist. Here we will exploring the frequentist approach while explaining its most important concepts.</p>
+                        <p data-lang="jp">A/Bテストは、アドテック業界において最も重要なタスクの一つです。基本的に、A/Bテストにはベイジアンアプローチとフリクエンシストアプローチの2つの主要なアプローチがあります。ここでは、フリクエンシストアプローチを探求し、その最も重要な概念について説明します。</p>
+                        <br>
+                        <a href="https://colab.research.google.com/drive/1h-TBMkB0HACgIbZEHLrokZsD5qKK80uF?usp=sharing" target="_blank">View Project  【English】</a>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="https://colab.research.google.com/drive/1AN5aQ0OQowQDxuISqNTu0K0RUyjF4iwd?usp=sharing" target="_blank">View Project【日本語版】</a>
+                    </div>
+                </div>
+
+                <div class="project shadow-large fade-in">
+                    <div class="project-image">
                         <img src="images/nlp-logo.png" />
                     </div>
                     <div class="project-info">
-                        <h3>Website Text Classification (TF-IDF approach)</h3>
-                        <p>
-                            When placing advertisements in a website is important to make sure the quality of the content. If the content is 'sensitive', placing a banner could damage advertiser's damage. In this notebook we build a pipeline that, scraping the content from a web and using NLP afterwards, we check if the content is sensitive or not to blacklist it.'
+                        <h3 data-lang="en">Website Text Classification (TF-IDF approach)</h3>
+                        <h3 data-lang="jp">ウエブサイト分類（TF-IDFアプローチ）</h3>
+                        <p data-lang="en">
+                            In this version of the project we use the classic TF-IDF formula instead of LLMs.
+                        </p>
+                        <p data-lang="jp">
+                            今回はウエブサイト分類のプロジェクトをTF-IDFの関数を使用し、開発します。
                         </p>
                         <br>
                         <a href="https://colab.research.google.com/drive/1uv-ZBDuYGV-lNR73iL9lFJWnPpPzcwHx?usp=sharing" target="_blank">View Project</a>
@@ -224,12 +234,34 @@
 
                 <div class="project shadow-large fade-in">
                     <div class="project-image">
+                        <img src="images/lreg.jpg" />
+                    </div>
+                    <div class="project-info">
+                        <h3 data-lang="en">Least Squares Ideal Function Finder</h3>
+                        <h3 data-lang="jp">最小二乗法理想関数探索ツール</h3>
+                        <p data-lang="en">
+                            Comprehensive repository containing an script to find the best four function that can fit a sample of random data using the Least Squares function.
+                        </p>
+                        <p data-lang="jp">
+                            ランダムデータのサンプルに最適な4つの関数を最小二乗法を用いて見つけるスクリプトを含む包括的なリポジトリ。
+                        </p>
+                        <br>
+                        <a href="https://github.com/dvallslanaquera/ideal_finder/tree/main/src" target="_blank">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project shadow-large fade-in">
+                    <div class="project-image">
                         <img src="images/devops.png" />
                     </div>
                     <div class="project-info">
-                        <h3>CI/CD 101</h3>
-                        <p>
+                        <h3 data-lang="en">CI/CD 101</h3>
+                        <h3 data-lang="jp">CI/CD開発の入門知識</h3>
+                        <p data-lang="en">
                             Continuous Integration, Delivery and Deployment tools for Data Scientists. This is a sample from training materials about CI/CD for company newcomers. It includes an overview of three important tools used for MLOps: GitLab, Docker and Jenkins.
+                        </p>
+                        <p data-lang="jp">
+                            データサイエンティスト向けの継続的インテグレーション、デリバリー、およびデプロイメントツール。この資料は、会社の新入社員向けのCI/CDトレーニング教材のサンプルです。MLOpsで使用される3つの重要なツールであるGitLab、Docker、およびJenkinsの概要が含まれています。
                         </p>
                         <br>
                         <a href="https://colab.research.google.com/drive/1U56QuaaMkGoNNmz3zbmkhm681agcOgii?usp=sharing" target="_blank">View Project</a>
@@ -241,9 +273,13 @@
                         <img src="images/heart.png" />
                     </div>
                     <div class="project-info">
-                        <h3>Survival Analysis</h3>
-                        <p>
+                        <h3 data-lang="en">Survival Analysis</h3>
+                        <h3 data-lang="jp">生存解析</h3>
+                        <p data-lang="en">
                             Example of a survival analysis project using real medical records containing echocardiogram data of patients. We will see how we can predict the survival rate of those patients and explore the covariates that affect this rate.
+                        </p>
+                        <p data-lang="jp">
+                            実際の医療記録を使用した生存分析プロジェクトの例。患者の心エコーデータが含まれています。このプロジェクトでは、患者の生存率を予測し、この率に影響を与える共変量を探ります。
                         </p>
                         <br>
                         <a href="https://colab.research.google.com/drive/1MomnKi3kF-zw2xi4jzvn5sIB8Ot3Oqgp?usp=sharing#scrollTo=j6aYwmBL4FI9" target="_blank">View Project</a>
@@ -255,9 +291,13 @@
                         <img src="images/win-logo.png" />
                     </div>
                     <div class="project-info">
-                        <h3>Unhashing algorithm</h3>
-                        <p>
+                        <h3 data-lang="en">Unhashing algorithm</h3>
+                        <h3 data-lang="jp">アンハッシングアルゴリズム</h3>
+                        <p data-lang="en">
                             Python script to match two lists of hashed IDs. It can be run on the terminal console and it contains a module that can be linked to a database to automatically generate and update the lookup list of hashed IDs.
+                        </p>
+                        <p data-lang="jp">
+                            ハッシュ化されたIDの2つのリストを照合するためのPythonスクリプト。ターミナルコンソールで実行でき、データベースにリンクしてハッシュ化されたIDのルックアップリストを自動的に生成および更新できるモジュールが含まれています。
                         </p>
                         <br>
                         <a href="https://github.com/dvallslanaquera/unhasher/blob/main/main.py" target="_blank">View Project</a>
@@ -269,23 +309,31 @@
                         <img src="images/speed.jpg" />
                     </div>
                     <div class="project-info">
-                        <h3>Credit Fraud</h3>
-                        <p>
+                        <h3 data-lang="en">Credit Fraud Detector</h3>
+                        <h3 data-lang="jp">クレジット詐欺検出器</h3>
+                        <p data-lang="en">
                             Financial companies use credit scores to rate new clients and detect potential frauds. In this notebook we will be working on a forecast tool that predicts the risk of fraud working with the data from the Give Me Some Credit Kaggle challenge.
+                        </p>
+                        <p data-lang="jp">
+                            金融会社はクレジットスコアを使用して新しい顧客を評価し、潜在的な詐欺を検出します。このノートブックでは、Give Me Some Credit Kaggleチャレンジのデータを使用して、詐欺のリスクを予測するための予測ツールに取り組みます。
                         </p>
                         <br>
                         <a href="https://colab.research.google.com/drive/1cWwtFWnfzGMGPB9W4mJVyP-ArxEnbl9N?usp=sharing" target="_blank">View Project</a>
                     </div>
                 </div>
-
+                
                 <div class="project shadow-large fade-in">
                     <div class="project-image">
                         <img src="images/timeseries.jpg" />
                     </div>
                     <div class="project-info">
-                        <h3>Time Series Forecasting</h3>
-                        <p>
+                        <h3 data-lang="en">Time Series Forecasting</h3>
+                        <h3 data-lang="jp">時系列予測</h3>
+                        <p data-lang="en">
                             Sample of how we can forecast future values in a time series using LSTM.
+                        </p>
+                        <p data-lang="jp">
+                            LSTMを使用して時系列の将来の値を予測する方法のサンプル。
                         </p>
                         <br>
                         <a href="https://colab.research.google.com/drive/16CwegTfiYt7d71LeBwFzDRiB3G-GEApA?usp=sharing" target="_blank">View Project</a>

@@ -78,8 +78,8 @@ header a {
 
 header a:hover {
     color: #fff; 
-    background: rgb(240, 84, 84); 
-    border-color: rgb(240, 84, 84);
+    background: rgb(240, 84, 84, 0.5); 
+    border-color: rgb(240, 84, 84, 0.5);
     border-radius: 4px;
 }
 
@@ -204,8 +204,8 @@ footer {
 
 .btn-rounded-white:hover {
     color: #fff; 
-    background: rgba(240, 84, 84, 0.8); 
-    border-color: rgba(240, 84, 84, 0.8); 
+    background: rgba(240, 84, 84, 0.5); 
+    border-color: rgba(240, 84, 84, 0.5); 
 }
 
 .shadow {
@@ -519,7 +519,7 @@ footer {
 
 .project-info a {
     color:#30475E;
-    font-size:20px;
+    font-size:18px;
     font-weight:700;
     border: 2px solid #30475E;
     padding: 10px 20px;
@@ -549,14 +549,14 @@ footer {
 }
 
 .fade-in {
-  opacity: 0;
-  transform: translateY(150px);
-  transition: opacity 1.5s ease, transform 1.5s ease;
+    opacity: 0;
+    transform: translateY(150px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
 .fade-in.fade-in-visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0); 
 }
 
 #more-projects {
@@ -900,5 +900,6 @@ footer {
 
 .about-me-text {
     flex: 2;
-    padding-left: 20px;
+    padding-left: 22px;
+    font-size: 16px;
 }
