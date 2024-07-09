@@ -1,6 +1,6 @@
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 14px
+    font-size: 14px 
 }
 
 body.active {
@@ -906,11 +906,11 @@ footer {
 
 @media only screen and (max-width: 480px) {
     body {
-        font-size: 12px; /* Adjust the base font size */
+        font-size: 12px; 
     }
 
     header a {
-        font-size: 14px; /* Adjust the font size of menu items */
+        font-size: 14px; 
     }
 
     #lead-content h1 {
@@ -923,23 +923,23 @@ footer {
 
     #lead-content a {
         padding: 5px 10px; 
-        font-size: 14px; /* Adjust font size of buttons */
+        font-size: 14px; 
     }
 
     #contact-form input, #contact-form textarea {
-        font-size: 14px; /* Adjust the font size of form inputs */
+        font-size: 14px; 
     }
 
     #contact-form button {
-        font-size: 14px; /* Adjust the font size of form buttons */
+        font-size: 14px;
     }
 
     .about-me-text h2 {
-        font-size: 1.5em; /* Adjust the font size of About Me heading */
+        font-size: 1.5em; 
     }
 
     .about-me-text p {
-        font-size: 1em; /* Adjust the font size of About Me text */
+        font-size: 1em; 
     }
 
     #language-switcher button {
@@ -953,11 +953,27 @@ footer {
     }
 
     #lead {
-        height: 100vh; /* Ensure it covers full viewport height */
+        height: 100vh; 
         padding: 0;
     }
 
+    #lead-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     #lead-overlay {
-        height: 100vh; /* Ensure it covers full viewport height */
+        height: 100vh; 
+    }
+
+    .project-info a {
+        padding: 5px 10px;
+        font-size: 15px; 
     }
 }
