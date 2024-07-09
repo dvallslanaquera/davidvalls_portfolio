@@ -353,12 +353,12 @@
             <li>TensorFlow</li>
             <li>Anomaly Detection</li>
             <li>Pipeline design</li>
-            <li>MySQL</li>
+            <li>SQL</li>
             <li>Spark</li>
             <li>NLP</li>
             <li>MLOps</li>
             <li>Tableau</li>
-            <li>CI/CD Dev</li>
+            <li>CI/CD</li>
             <li>Docker</li>
             <li>MLOps</li>
             <li>Git</li>
@@ -367,13 +367,24 @@
     <!-- End #skills -->
 
     <div id="contact" class="fade-in">
-        <h2 class="heading">Get in Touch</h2>
+        <h2 data-lang="en" class="heading">Get in Touch</h2>
+        <h2 data-lang="jp" class="heading">お問い合わせ</h2>
         <div id="contact-form">
             <form action="https://formspree.io/f/mdobdyop" method="POST">
                 <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
+                
+                <!-- English version -->
+                <input data-lang="en" type="email" name="_replyto" placeholder="Your email" required>
+                <textarea data-lang="en" name="message" placeholder="Your message" required></textarea>
+                <button data-lang="en" type="submit">Send</button>
+                <div data-lang="en" id="message-sent">
+                    <p>Thank you for your message! I will get back to you soon.</p>
+                </div>
+                
+                <!-- Japanese version -->
+                <input data-lang="jp" type="email" name="_replyto" placeholder="メールアドレス" required>
+                <textarea data-lang="jp" name="message" placeholder="メッセージ" required></textarea>
+                <button data-lang="jp" type="submit">送信</button>
             </form>
         </div>
         <!-- End #contact-form -->
