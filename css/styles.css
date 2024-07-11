@@ -904,6 +904,15 @@ footer {
     font-size: 16px;
 }
 
+#skills ul li.transparent {
+    opacity: 0.7;
+    color: rgb(56, 56, 56);
+}
+
+#skills ul li.unhighlighted {
+    color: rgb(56, 56, 56);
+}
+
 @media only screen and (max-width: 480px) {
     body {
         font-size: 12px; 
