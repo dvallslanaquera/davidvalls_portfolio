@@ -76,6 +76,7 @@ header a {
 }
 
 header a:hover {
+    color: #F5F5F5;
     background: rgba(240, 84, 84, 0.5);
     border-radius: 4px;
 }
