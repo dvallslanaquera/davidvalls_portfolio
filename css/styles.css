@@ -189,6 +189,7 @@ footer p,
 }
 
 .btn-rounded-white:hover {
+    color: #F5F5F5;
     background: rgba(240, 84, 84, 0.5);
     border-color: rgba(240, 84, 84, 0.5);
 }
