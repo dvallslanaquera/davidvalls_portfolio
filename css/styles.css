@@ -676,6 +676,19 @@ footer p,
     padding: 0 0 0 15px;
 }
 
+.custom-bullet li {
+    list-style-type: none; /* Remove default bullet */
+    position: relative;    /* Create space for custom bullet */
+    padding-left: 20px;    /* Adjust padding to make room for emoji */
+}
+
+.custom-bullet li::before {
+    content: "🔹";         /* Your custom emoji or character */
+    position: absolute;    /* Position it before the text */
+    left: 0;
+    top: 0;
+}
+
 @media only screen and (max-width: 750px) {
     #experience-timeline:before,
     #experience-timeline:after {
